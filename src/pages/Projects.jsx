@@ -3,7 +3,6 @@ import FadeInSection from "../components/FadeInSection.jsx";
 import wasteNotPromptNot from "../assets/images/WasteNotPromptNot.png";
 import recipeAi from "../assets/images/recipeai.png";
 import nflStat from "../assets/images/NFL Stat.png";
-import nflStatsDemo from "../assets/videos/NFLStatsDemo.mp4";
 
 const PROJECTS = [
   {
@@ -46,7 +45,10 @@ export default function Projects() {
         </div>
 
         <div className="hero-right">
-          <h2>PROJECTS</h2>
+          <div className="scroll-cue">
+            <span>Scroll</span>
+            <span className="scroll-cue-line" aria-hidden="true" />
+          </div>
         </div>
       </section>
 
@@ -72,17 +74,6 @@ export default function Projects() {
           ))}
         </FadeInSection>
       </section>
-
-      <FadeInSection className="content-section">
-        <h2>Project Demo</h2>
-
-        <video controls width="100%">
-          <source src={nflStatsDemo} type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
-
-        <p>This short video demonstrates the NFL Stats Predictor Model.</p>
-      </FadeInSection>
     </div>
   );
 }
