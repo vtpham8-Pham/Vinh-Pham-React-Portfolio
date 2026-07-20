@@ -299,6 +299,26 @@ a {
   color: var(--parchment);
 }
 
+/* SCROLL CUE (EXPERIENCE PAGE) */
+.scroll-cue {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 16px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--parchment-dim);
+}
+
+.scroll-cue-line {
+  width: 1px;
+  height: 72px;
+  background: linear-gradient(to bottom, var(--amber), transparent);
+  animation: scrollPulse 2.2s ease-in-out infinite;
+}
+
 /* ABOUT PAGE PHOTO */
 .about-right {
   display: flex;
@@ -763,6 +783,20 @@ video {
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+@keyframes scrollPulse {
+  0%,
+  100% {
+    opacity: 0.3;
+    transform: scaleY(0.6);
+    transform-origin: top;
+  }
+  50% {
+    opacity: 1;
+    transform: scaleY(1);
+    transform-origin: top;
   }
 }
 

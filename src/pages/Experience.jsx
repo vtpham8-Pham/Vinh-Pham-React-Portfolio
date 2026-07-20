@@ -12,11 +12,14 @@ export default function Experience() {
       <section className="hero-split">
         <div className="hero-left">
           <h1>Experience</h1>
-          <p>My academic and professional journey so far.</p>
+          <p>Scroll down to see my roles, research, and education.</p>
         </div>
 
         <div className="hero-right">
-          <h2>EXPERIENCE</h2>
+          <div className="scroll-cue">
+            <span>Scroll</span>
+            <span className="scroll-cue-line" aria-hidden="true" />
+          </div>
         </div>
       </section>
 
