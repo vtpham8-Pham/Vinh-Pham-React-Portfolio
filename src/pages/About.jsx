@@ -1,6 +1,6 @@
 import usePageTitle from "../hooks/usePageTitle.js";
 import FadeInSection from "../components/FadeInSection.jsx";
-import headshot from "../assets/images/Headshot.jpg";
+import headshot from "../assets/images/Headshot.png";
 
 export default function About() {
   usePageTitle("About");
@@ -12,13 +12,14 @@ export default function About() {
           <div>
             <h1>About Me</h1>
             <p>
-              Hi, I'm Vinh! I'm a junior studying Computer Science and Business,
+              Hi, I'm Vinh! I'm a senior studying Computer Science and Business,
               and I am heavily interested in the software development, machine
               learning, and AI fields.
             </p>
             <p>
-              In my free time, you'll see me playing tennis, golf, and
-              pickleball, and working on my projects.
+              In my free time, you'll see me playing tennis, golf, pickleball,
+              and snowboarding in the winter. I also enjoy trying new foods and
+              exploring new places.
             </p>
           </div>
         </div>
@@ -34,29 +35,35 @@ export default function About() {
       <FadeInSection className="content-section">
         <h2>Who I Am</h2>
         <p>
-          I am currently an AI/ML Researcher at Algoverse, where I explore how
-          machine learning and AI can be applied to meaningful, real-world
-          challenges.
+          I am currently an AI/ML Researcher at Algoverse, where I am
+          researching in the healthcare field. Currently working with agentic AI
+          and large language models to improve healthcare outcomes.{" "}
         </p>
         <p>
-          I focus on developing applications that leverage the power of machine
-          learning and AI to create innovative solutions.
+          I have experience in Artifical Intelligence, Machine Learning, and
+          Software Development. I have a strong interest in the intersection of
+          AI and healthcare, and I am passionate about using technology to
+          improve people's lives.
         </p>
+
         <p>
           I enjoy meeting new people from various backgrounds and collaborating
-          on meaningful projects. If you're interested in working together,
-          feel free to reach out.
+          on meaningful projects. If you're interested in working together, feel
+          free to reach out.
         </p>
       </FadeInSection>
 
       <FadeInSection className="content-section">
         <h2>What I&rsquo;m Working On</h2>
         <ul>
-          <li>Building and improving personal and academic software projects</li>
+          <li>
+            Contributing to my research at Algoverse, where I am aiming to
+            publish a paper to an AI/ML conference in the next coming year.
+          </li>
           <li>
             Expanding my knowledge in Machine Learning, AI, and Data Structures.
           </li>
-          <li>Contributing to my current research role at Algoverse</li>
+          <li>Preparing for my upcoming internship at Benchmark.</li>
         </ul>
       </FadeInSection>
 
@@ -75,7 +82,7 @@ export default function About() {
             <tr>
               <td>Languages</td>
               <td>Java, Python, C++, C#, JavaScript</td>
-              <td>2+ Years</td>
+              <td>3+ Years</td>
             </tr>
             <tr>
               <td>Frontend</td>
