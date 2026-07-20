@@ -37,12 +37,16 @@ export default function Contact() {
           <h1>Contact</h1>
           <p>
             If you&rsquo;d like to connect, collaborate, or learn more about my
-            work, feel free to reach out via VinhPhamBiz@gmail.com
+            work, feel free to reach out via VinhPhamBiz@gmail.com, or scroll
+            down to fill out the form.
           </p>
         </div>
 
         <div className="hero-right">
-          <h2>CONTACT</h2>
+          <div className="scroll-cue">
+            <span>Scroll</span>
+            <span className="scroll-cue-line" aria-hidden="true" />
+          </div>
         </div>
       </section>
 
