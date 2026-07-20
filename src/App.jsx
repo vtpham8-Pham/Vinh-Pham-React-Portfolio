@@ -13,7 +13,6 @@ export default function App() {
   return (
     <>
       <Nav />
-      <SideIcons />
       <PageTransition>
         <main>
           <Routes>
@@ -25,6 +24,7 @@ export default function App() {
           </Routes>
         </main>
       </PageTransition>
+      <SideIcons />
       <Footer />
     </>
   );

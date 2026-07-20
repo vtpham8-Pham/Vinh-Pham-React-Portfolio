@@ -845,10 +845,11 @@ a {
   }
 
   .side-icons {
-    top: auto;
-    bottom: 24px;
-    left: 24px;
+    position: static;
     flex-direction: row;
+    justify-content: center;
+    gap: 24px;
+    margin: 56px 0 4px;
   }
 
   .side-icons::after {
@@ -878,7 +879,9 @@ a {
   }
 
   .site-footer {
-    left: 24px;
-    bottom: 90px;
+    position: static;
+    display: block;
+    text-align: center;
+    margin: 0 0 40px;
   }
 }
