@@ -1,5 +1,18 @@
-import { Link } from "react-router-dom";
 import usePageTitle from "../hooks/usePageTitle.js";
+import Slideshow from "../components/Slideshow.jsx";
+import photo1 from "../assets/images/photo-1.jpeg";
+import photo2 from "../assets/images/photo-2.JPG";
+import photo3 from "../assets/images/photo-3.jpeg";
+import photo4 from "../assets/images/photo-4.jpeg";
+import photo5 from "../assets/images/photo-5.jpeg";
+
+const SLIDES = [
+  { src: photo1, alt: "Vinh Pham at the Euro sign sculpture in Frankfurt" },
+  { src: photo2, alt: "Vinh Pham getting ice cream" },
+  { src: photo3, alt: "Vinh Pham eating pho" },
+  { src: photo4, alt: "Vinh Pham on a rooftop at sunset with a friend" },
+  { src: photo5, alt: "Vinh Pham with friends" },
+];
 
 export default function Home() {
   usePageTitle();
@@ -20,18 +33,7 @@ export default function Home() {
       </div>
 
       <div className="hero-right">
-        <h2>
-          <Link to="/about">ABOUT</Link>
-        </h2>
-        <h2>
-          <Link to="/experience">EXPERIENCE</Link>
-        </h2>
-        <h2>
-          <Link to="/projects">PROJECTS</Link>
-        </h2>
-        <h2>
-          <Link to="/contact">CONTACT</Link>
-        </h2>
+        <Slideshow images={SLIDES} />
       </div>
     </section>
   );
