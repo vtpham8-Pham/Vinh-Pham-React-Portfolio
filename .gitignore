@@ -3,3 +3,9 @@ dist
 .DS_Store
 *.local
 .claude/
+.taste-skill/
+.playwright-mcp/
+
+# Design-tool notes (local only)
+.impeccable/
+PRODUCT.md
