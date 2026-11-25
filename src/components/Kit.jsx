@@ -67,7 +67,7 @@ export function Hero({ kicker, title, lead, secondary, photo, visual, float }) {
               {...responsive(photo.src, "(max-width: 1023px) 100vw, 80vw")}
               alt={photo.alt}
               style={photo.pos ? { "--ly-pos": photo.pos } : undefined}
-              fetchpriority="high"
+              fetchPriority="high"
               data-source="client"
               data-subject={photo.subject}
             />

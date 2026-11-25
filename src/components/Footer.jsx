@@ -1,14 +1,14 @@
-import { MAIN_ACTION, MArrow, responsive } from "./Kit.jsx";
+import { MAIN_ACTION, MArrow } from "./Kit.jsx";
 
 const LINKEDIN = "https://www.linkedin.com/in/vinhhphvm/";
 const GITHUB = "https://github.com/vinhhphvm";
 
-// footer.closing (layout-v4.md): row 1 the dealt close (close-photo), row 2 the footer-dark links.
+// footer.closing: row 1 the invitation and its button, row 2 the footer-dark links.
 export default function Footer({ close }) {
   return (
     <footer className="footer closing footer--dark ground-inverse" id="contact" aria-labelledby="close-h">
       <div className="wrap">
-        <div className="closing__cta close--photo">
+        <div className="closing__cta">
           <div className="section-head--split">
             <div>
               <h2 id="close-h">{close.title}</h2>
@@ -18,17 +18,6 @@ export default function Footer({ close }) {
               {MAIN_ACTION.label}
               <MArrow />
             </a>
-          </div>
-          <div className="close__media">
-            <img
-              src={close.photo.src}
-              {...responsive(close.photo.src, "(max-width: 639px) 200vw, 100vw")}
-              alt={close.photo.alt}
-              style={close.photo.pos ? { "--pos": close.photo.pos } : undefined}
-              loading="lazy"
-              data-source="client"
-              data-subject={close.photo.subject}
-            />
           </div>
         </div>
 

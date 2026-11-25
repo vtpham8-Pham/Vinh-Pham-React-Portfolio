@@ -20,9 +20,9 @@
 .form-panel textarea { min-height: 128px; resize: vertical; }
 @media (max-width: 1023px) { .form-panel { margin-top: var(--s-7); } }
 
-/* The school's logo in its panel. */
-.logo-panel { min-width: 0; display: grid; place-items: center; aspect-ratio: 4 / 3; padding: var(--s-8); background: var(--g-alt); }
-.logo-panel > img { width: min(80%, 440px); height: auto; }
+/* The school's logo in its panel: the panel runs the height of the rows beside it, the mark centred. */
+.logo-panel { position: relative; min-width: 0; align-self: stretch; min-height: 240px; padding: 0; background: var(--g-alt); }
+.logo-panel > img { position: absolute; inset: 0; margin: auto; width: calc(100% - 2 * var(--s-6)); height: calc(100% - 2 * var(--s-6)); max-width: 380px; object-fit: contain; }
 
 /* The paper's diagram: a section-sized panel. */
 .diagram-panel { min-height: 360px; display: grid; }
@@ -36,7 +36,6 @@
 .skill-wall { list-style: none; margin: 0; padding: 0; }
 @media (max-width: 1023px) { .skill-wall { margin-top: var(--s-7); } }
 @media (max-width: 639px) {
-  .logo-panel { padding: var(--s-6); }
   /* the paper's section stacks the list over the diagram: two phone screens (layout-v4.md, --hm) */
   #algoverse { --hm: 2; }
 }
@@ -48,7 +47,7 @@
 /* The direct lines on the contact page: a real icon before each name. */
 .rows .line-icon { display: inline-flex; align-items: center; gap: var(--s-3); }
 
-@media (max-width: 639px) { .logo-panel { aspect-ratio: auto; min-height: 240px; } }
+@media (max-width: 1023px) { .logo-panel { aspect-ratio: 16 / 9; min-height: 0; margin-top: var(--s-7); } }
 
 /* The float card would cover the subject in the phone crop. */
 @media (max-width: 639px) { .hero__media .ly-float { display: none; } }
@@ -120,14 +119,6 @@
 .research__statement .mo-wh__text { font-family: var(--font-display); font-size: clamp(28px, 3.4vw, 48px); line-height: 1.15; letter-spacing: var(--display-tracking); margin: 0; }
 @media (max-width: 639px) { #algoverse { --hm: 3; } }
 
-/* The closing photograph beside the invitation, at a 4:3 frame so faces are not cropped to a strip. */
-.closing__cta.close--photo { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: var(--s-8); align-items: center; }
-.close--photo > .section-head--split { flex-direction: column; align-items: flex-start; }
-.closing__cta.close--photo > .close__media { flex: none; min-height: 0; aspect-ratio: 16 / 10; }
-@media (max-width: 1023px) {
-  .closing__cta.close--photo { grid-template-columns: minmax(0, 1fr); gap: var(--s-6); }
-  .closing__cta.close--photo > .close__media { aspect-ratio: 4 / 3; }
-}
 /* The logo files are squares with the mark across the middle: fill the banner from that middle band. */
 .role__logo > img { width: 100%; height: 100%; max-width: none; object-fit: cover; }
 #apmac .role__logo > img { width: min(100%, 380px); }
@@ -136,3 +127,32 @@
 /* Show each logo's mark at a calm size: the square file scaled so its middle band fills the banner. */
 .role__logo > img, #apmac .role__logo > img { inset: auto; top: 50%; left: 50%; transform: translate(-50%, -50%); width: auto; height: 300%; max-width: none; object-fit: contain; }
 #benchmark, #apmac, #algoverse { scroll-margin-top: 96px; }
+
+/* Wide screens: a section keeps at least one screen but grows past it when its content is taller
+   (a short or zoomed window), instead of laying its last rows under the next section. */
+@media (min-width: 1280px) {
+  main > :is(section, .section):not(.hero, .section--hero) {
+    height: auto; min-height: calc(var(--h, 1) * 100vh); min-height: calc(var(--h, 1) * 100svh);
+    display: flex; flex-direction: column;
+  }
+  main > :is(section, .section):not(.hero, .section--hero) > :is(.wrap, .container) { flex: 1 0 auto; height: auto; min-height: 0; }
+  /* a .fill still takes the room the screen leaves, but never less than its own content */
+  main > :is(section, .section):not(.hero, .section--hero) > .wrap > .fill { flex: 1 0 auto; }
+}
+
+/* The footer is a close, not a screen: the invitation, then the links, at their own height. */
+footer.closing { height: auto; min-height: 0; }
+footer.closing > .wrap { height: auto; display: grid; gap: var(--s-9, 72px); }
+@media (max-width: 639px) { footer.closing { min-height: 0; } footer.closing > .wrap { gap: var(--s-8); } }
+
+/* The paper's acceptance, as a line over the research result. */
+.paper-badge { display: inline-flex; flex-wrap: wrap; align-items: center; gap: var(--s-2) var(--s-4); padding: var(--s-2) var(--s-4); border-radius: 999px; background: var(--surface); width: fit-content; font-size: var(--t-small); }
+.paper-badge__venue { color: var(--muted); }
+
+/* A phone: the Projects hero's code card takes its own height, so it never runs under the next section. */
+@media (max-width: 639px) {
+  .hero--split .hero__media:has(> .hero-code) { flex: none; height: auto; min-height: 0; overflow: visible; }
+  .hero-code { height: auto; min-height: 0; }
+}
+/* "Accepted" is a settled state, not a live one: the dot stays still. */
+.paper-badge .ly-live::before { animation: none; }

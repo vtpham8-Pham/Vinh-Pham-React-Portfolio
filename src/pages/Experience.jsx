@@ -32,7 +32,6 @@ export default function Experience() {
             pos: "50% 62%",
             subject: "Vinh Pham in Frankfurt",
           }}
-          float={{ label: "Accepted", when: "NeurIPS 2026", title: "GenAI4Health workshop paper, Sydney" }}
         />
 
         <section className="section g2" id="roles" aria-labelledby="roles-h">
@@ -104,7 +103,10 @@ export default function Experience() {
         <section className="section research" id="algoverse" aria-labelledby="algoverse-h" style={{ "--h": 2 }}>
           <div className="wrap">
             <div className="research__statement" id="paper">
-              <p className="t-label">Research at Algoverse</p>
+              <div className="paper-badge">
+                <span className="ly-live">Accepted</span>
+                <span className="paper-badge__venue">GenAI4Health workshop, NeurIPS 2026, Sydney</span>
+              </div>
               <p className="mo-wh__text" data-moment="word-highlight">
                 Our corrective memory notes cut harmful clinical LLM outputs from 63.4% to 15.1% across
                 10,800+ generations, closing <strong>76.3%</strong> of the safety gap with no over-refusal on
@@ -142,7 +144,7 @@ export default function Experience() {
               <h2 id="education-h">Computer science at Arizona State</h2>
               <p>Bachelor of Science in Computer Science, minor in Business. August 2023 to May 2027.</p>
             </div>
-            <div className="grid grid--top fill">
+            <div className="grid grid--top">
               <Rows
                 className="span-6"
                 items={[
@@ -166,12 +168,6 @@ export default function Experience() {
         close={{
           title: "Send Vinh a message",
           lead: "About a role, a project or research. Vinh is in Tempe, Arizona.",
-          photo: {
-            src: "/photos/ice-cream.jpg",
-            alt: "Vinh Pham in a tennis club shirt holding ice cream at night",
-            pos: "50% 30%",
-            subject: "Vinh Pham with ice cream",
-          },
         }}
       />
     </>

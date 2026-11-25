@@ -119,12 +119,6 @@ export default function Projects() {
         close={{
           title: "Send Vinh a message",
           lead: "About a role, a project or research. Vinh is in Tempe, Arizona.",
-          photo: {
-            src: "/photos/headshot.jpg",
-            alt: "Portrait of Vinh Pham in a grey suit",
-            pos: "50% 30%",
-            subject: "Vinh Pham",
-          },
         }}
       />
     </>

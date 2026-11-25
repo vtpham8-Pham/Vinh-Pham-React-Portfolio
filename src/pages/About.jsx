@@ -111,12 +111,6 @@ export default function About() {
         close={{
           title: "Send Vinh a message",
           lead: "About a role, a project or research. Vinh is in Tempe, Arizona.",
-          photo: {
-            src: "/photos/frankfurt.jpg",
-            alt: "Vinh Pham in front of the euro sculpture in Frankfurt",
-            pos: "50% 30%",
-            subject: "Vinh Pham in Frankfurt",
-          },
         }}
       />
     </>

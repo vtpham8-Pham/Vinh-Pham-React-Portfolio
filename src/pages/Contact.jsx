@@ -120,12 +120,6 @@ export default function Contact() {
         close={{
           title: "Send Vinh a message",
           lead: "About a role, a project or research. Vinh is in Tempe, Arizona.",
-          photo: {
-            src: "/photos/pho.jpg",
-            alt: "Vinh Pham at a bowl of pho in a Vietnamese restaurant",
-            pos: "50% 34%",
-            subject: "Vinh Pham eating pho",
-          },
         }}
       />
     </>
