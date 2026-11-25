@@ -113,9 +113,14 @@ export default function Experience() {
                 benign requests.
               </p>
             </div>
-            <div className="section-head">
-              <h2 id="algoverse-h">AI/ML Research Intern, Algoverse</h2>
-              <p>Remote, June to September 2026. Co-authored paper accepted to the GenAI4Health workshop at NeurIPS 2026 in Sydney.</p>
+            <div className="grid grid--top role role--head">
+              <div className="span-5 role__title">
+                <h2 id="algoverse-h">AI/ML Research Intern, Algoverse</h2>
+                <p className="muted">Remote, June to September 2026. Co-authored paper accepted to the GenAI4Health workshop at NeurIPS 2026 in Sydney.</p>
+              </div>
+              <div className="panel org-panel role__logo span-6 start-7" style={{ "--org-bg": "#1b2b5e" }}>
+                <img src="/photos/algoverse-logo.png" alt="Algoverse AI Research logo" />
+              </div>
             </div>
             <div className="grid grid--top fill">
               <Rows

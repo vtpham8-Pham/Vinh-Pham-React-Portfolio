@@ -163,3 +163,8 @@ footer.closing > .wrap { height: auto; display: grid; gap: var(--s-9, 72px); }
 @media (max-width: 1023px) {
   .hero--split .hero__media.hero__media--ratio { flex: none; min-height: 0; align-self: stretch; }
 }
+
+/* Algoverse: its heading and logo banner as one row, like the two roles above, then the bullets. */
+.role--head { margin-bottom: var(--s-7); }
+/* Algoverse's file holds a wider wordmark and a line under it: a smaller zoom keeps "AI RESEARCH" in the banner. */
+#algoverse .role__logo > img { height: 210%; }

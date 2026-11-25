@@ -4,7 +4,7 @@ import { MAIN_ACTION } from "./Kit.jsx";
 const ORGS = [
   { name: "Benchmark Electronics", role: "AI Operations Intern, since Aug 2026", logo: "/photos/benchmark.png", bg: "#00599c", href: "/experience#benchmark" },
   { name: "APMAC Consulting", role: "AI Product Manager Intern, since Sep 2026", logo: "/photos/apmac.jpg", bg: "#7a0808", href: "/experience#apmac" },
-  { name: "Algoverse", role: "AI/ML Research Intern, Jun to Sep 2026", logo: "/photos/algoverse.jpg", bg: "#ffffff", href: "/experience#algoverse" },
+  { name: "Algoverse", role: "AI/ML Research Intern, Jun to Sep 2026", logo: "/photos/algoverse-logo.png", bg: "#1b2b5e", href: "/experience#algoverse" },
 ];
 
 const LINKS = [
