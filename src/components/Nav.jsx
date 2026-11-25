@@ -34,7 +34,7 @@ export default function Nav() {
               <a
                 className="nav__link"
                 href={link.href}
-                aria-current={pathname === link.href ? "page" : undefined}
+                aria-current={pathname === link.href || (link.href === "/about" && pathname === "/") ? "page" : undefined}
               >
                 {link.label}
                 {link.menu && (

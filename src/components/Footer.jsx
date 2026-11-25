@@ -24,9 +24,7 @@ export default function Footer({ close }) {
         <div className="closing__links">
           <div className="grid">
             <div className="span-4 stack-4">
-              <a className="nav__logo footer__name" href="/">
-                Vinh Pham
-              </a>
+              <p className="nav__logo footer__name">Vinh Pham</p>
               <p className="footer__lede">AI operations, product and research in Tempe, Arizona.</p>
             </div>
             <div className="span-2 start-9 footer__col">

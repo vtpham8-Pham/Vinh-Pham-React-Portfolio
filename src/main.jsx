@@ -7,7 +7,9 @@ import "./index.css";
 
 // Each page names its own URL on the live domain.
 const canonical = document.querySelector('link[rel="canonical"]');
-if (canonical) canonical.href = "https://vinhpham.netlify.app" + window.location.pathname;
+// The About page is also the home page, so both addresses name the home page.
+const path = window.location.pathname === "/about" ? "/" : window.location.pathname;
+if (canonical) canonical.href = "https://vinhpham.netlify.app" + path;
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
