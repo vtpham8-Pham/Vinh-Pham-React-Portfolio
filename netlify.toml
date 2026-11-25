@@ -6,3 +6,16 @@
   from = "/*"
   to = "/index.html"
   status = 200
+
+# Photos: returning visitors reuse their copy for an hour without asking, and for a day while it refreshes
+# in the background. (Replacing a photo under the same name can take up to an hour to show for them.)
+[[headers]]
+  for = "/photos/*"
+  [headers.values]
+    Cache-Control = "public, max-age=3600, stale-while-revalidate=86400"
+
+# Built JS and CSS have the content hash in their names, so they never change under one name.
+[[headers]]
+  for = "/assets/index-*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"

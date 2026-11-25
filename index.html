@@ -23,6 +23,28 @@
     <meta name="site-kind" content="other" />
     <meta name="page-type" content="service" />
 
+    <!-- Start the page's hero photo now, beside the JavaScript, instead of after React renders it.
+         Mirrors responsive() in src/components/Kit.jsx: same files, widths and sizes. -->
+    <script>
+      (function () {
+        var heroes = {
+          "/": ["headshot", 800, 1254],
+          "/about": ["pho", 600, 1200],
+          "/experience": ["frankfurt", 600, 1200],
+          "/contact": ["friends", 600, 1200],
+        };
+        var h = heroes[location.pathname.replace(/\/+$/, "") || "/"];
+        if (!h) return;
+        var l = document.createElement("link");
+        l.rel = "preload";
+        l.as = "image";
+        l.href = "/photos/" + h[0] + ".jpg";
+        l.setAttribute("imagesrcset", "/photos/" + h[0] + "-800.jpg " + h[1] + "w, /photos/" + h[0] + ".jpg " + h[2] + "w");
+        l.setAttribute("imagesizes", "(max-width: 1023px) 100vw, 80vw");
+        l.setAttribute("fetchpriority", "high");
+        document.head.appendChild(l);
+      })();
+    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400..700&display=swap" rel="stylesheet" />
