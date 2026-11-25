@@ -156,3 +156,10 @@ footer.closing > .wrap { height: auto; display: grid; gap: var(--s-9, 72px); }
 }
 /* "Accepted" is a settled state, not a live one: the dot stays still. */
 .paper-badge .ly-live::before { animation: none; }
+
+/* A hero photograph shown whole at its own shape (Contact's group of four: every face in frame),
+   its top on the words' top line rather than stretched to the column's height. */
+.hero--split .hero__media.hero__media--ratio { height: auto; aspect-ratio: var(--hero-ratio); align-self: start; }
+@media (max-width: 1023px) {
+  .hero--split .hero__media.hero__media--ratio { flex: none; min-height: 0; align-self: stretch; }
+}

@@ -41,10 +41,10 @@ export default function About() {
           lead="A computer science major with a business minor, working where software, machine learning and AI meet a real team with real deadlines."
           secondary={{ href: "/projects", label: "See the projects" }}
           photo={{
-            src: "/photos/pho.jpg",
-            alt: "Vinh Pham smiling at a bowl of pho in a Vietnamese restaurant",
-            pos: "50% 30%",
-            subject: "Vinh Pham eating pho",
+            src: "/photos/pumpkin.jpg",
+            alt: "Vinh Pham smiling on a hay bale at a pumpkin patch at night, holding a pumpkin",
+            pos: "50% 90%",
+            subject: "Vinh Pham at a pumpkin patch",
           }}
         />
 

@@ -6,6 +6,7 @@ export const MAIN_ACTION = { href: "/contact#message", label: "Send Vinh a messa
 // Each photograph in /photos has a full file and an -800 file (resize script); widths as written.
 const WIDTHS = {
   frankfurt: [600, 1200], "ice-cream": [800, 1600], pho: [600, 1200], friends: [600, 1200],
+  pumpkin: [600, 1200], "friends-group": [600, 1200],
   headshot: [800, 1254], wastenot: [800, 1536], nfl: [800, 1536],
 };
 
@@ -35,7 +36,10 @@ export function PrimaryButton({ className = "" }) {
   );
 }
 
-/** hero-split (layout-v4.md): words on span-5, the photograph on span-6 start-7, one float card. */
+/**
+ * hero-split (layout-v4.md): words on span-5, the photograph on span-6 start-7, one float card.
+ * photo.ratio (e.g. "4 / 3") frames the whole photograph at its own shape instead of filling the column's height.
+ */
 export function Hero({ kicker, title, lead, secondary, photo, visual, float }) {
   const external = secondary.href.startsWith("http");
   return (
@@ -60,7 +64,10 @@ export function Hero({ kicker, title, lead, secondary, photo, visual, float }) {
               </a>
             </div>
           </div>
-          <div className="hero__media span-6 start-7">
+          <div
+            className={`hero__media span-6 start-7${photo?.ratio ? " hero__media--ratio" : ""}`}
+            style={photo?.ratio ? { "--hero-ratio": photo.ratio } : undefined}
+          >
             {visual || (
             <img
               src={photo.src}

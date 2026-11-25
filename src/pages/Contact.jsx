@@ -16,9 +16,10 @@ export default function Contact() {
           lead="Use the form on this page or find Vinh on LinkedIn. Messages from the form go straight to Vinh's inbox."
           secondary={{ href: "https://www.linkedin.com/in/vinhhphvm/", label: "See Vinh on LinkedIn" }}
           photo={{
-            src: "/photos/friends.jpg",
-            alt: "Vinh Pham with five friends under a covered patio at night",
-            pos: "50% 75%",
+            src: "/photos/friends-group.jpg",
+            alt: "Vinh Pham smiling with three friends against a white wall",
+            pos: "50% 50%",
+            ratio: "4 / 3",
             subject: "Vinh Pham with friends",
           }}
         />
